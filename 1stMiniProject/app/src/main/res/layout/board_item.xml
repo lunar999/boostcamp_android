@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="2dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true"
+            android:columnCount="6">
+
+            <!--타이틀-->
+            <ImageView
+                android:layout_gravity="fill_vertical"
+                android:src="@drawable/img_profile"/>
+            <LinearLayout
+                android:layout_columnSpan="4"
+                android:layout_gravity="fill_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/board_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:maxLines="2"
+                    android:text="TITLE"/>
+                <TextView
+                    android:id="@+id/board_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="시간"
+                    android:drawableRight="@drawable/ic_notification_fit"
+                    android:drawablePadding="8dp"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/board_item_bt_favorite_mini"
+                android:layout_gravity="fill_vertical"
+                android:src="@drawable/ic_favorite"/>
+
+            <!--내용-->
+            <TextView
+                android:id="@+id/board_item_content"
+                android:layout_columnSpan="6"
+                android:layout_rowSpan="3"
+                android:layout_gravity="fill"
+                android:text="@string/menu_board"
+                android:linksClickable="true"
+                android:autoLink="web"/>
+            <ImageView
+                android:id="@+id/board_item_image"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="-8dp"
+                android:layout_marginRight="-8dp"
+                android:src="@drawable/img_attach"
+                android:layout_columnSpan="6"
+                android:layout_rowSpan="3"/>
+
+            <!--공유횟수-->
+            <TextView android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:gravity="left"
+                android:text="1만"
+                android:drawableLeft="@drawable/img_status"
+                android:drawablePadding="8dp"/>
+            <TextView android:layout_columnSpan="4"
+                android:layout_gravity="fill"
+                android:gravity="center_vertical|right"
+                android:text="댓글 9,689개 공유 397회 조회 32만회"/>
+
+            <!--카드뷰 마지막 라인-->
+            <Button
+                android:id="@+id/board_item_bt_favorite"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:drawableLeft="@drawable/ic_favorite"
+                android:background="@android:color/transparent"
+                android:text="좋아요"/>
+            <Button
+                android:id="@+id/board_item_bt_comment"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:drawableLeft="@drawable/ic_comment"
+                android:background="@android:color/transparent"
+                android:text="댓글 달기"/>
+            <Button
+                android:id="@+id/board_item_bt_share"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:drawableLeft="@drawable/ic_share"
+                android:background="@android:color/transparent"
+                android:text="공유하기"/>
+        </GridLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

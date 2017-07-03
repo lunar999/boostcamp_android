@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/searchbar_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_camera"
+        android:scaleType="fitCenter"/>
+
+    <!--검색 : 에딧텍스트-->
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionSearch"
+        android:textColor="@android:color/white"
+        android:hint="검색"
+        android:textColorHint="#aaffffff"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"/>
+
+    <ImageView
+        android:id="@+id/searchbar_messenger"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_messenger"
+        android:scaleType="fitCenter"/>
+    <ImageView
+        android:id="@+id/searchbar_info"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_info"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>
